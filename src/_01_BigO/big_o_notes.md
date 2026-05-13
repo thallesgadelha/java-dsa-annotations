@@ -440,3 +440,4 @@ Big O notation helps us understand how scalable an algorithm is.
 It does not tell us the exact running time in seconds. Instead, it tells us how the algorithm behaves as the input size grows.
 
 A good algorithm is not always the one with the smallest Big O notation, but Big O is a very useful tool for comparing algorithms, especially when dealing with large data sets.
+
