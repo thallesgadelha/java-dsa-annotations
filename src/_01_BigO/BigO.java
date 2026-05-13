@@ -62,4 +62,35 @@ public class BigO
             }
         }
     }
+    
+    /**
+     * @desc Big O: Drop Non-Dominants
+     * 
+     * O(n²) + O(n) = O(n² + n)
+     */
+    public static void example005(int n)
+    {
+        // O(n²)
+        for (int i = 0; i < n; ++i)
+        {
+            for (int j = 0; j < n; ++j)
+            {
+                System.out.println(i + " " + j);
+            }
+        }
+
+        // O(n)
+        for (int k = 0; k < 0; ++k)
+        {
+            System.out.println(k);
+        }
+    }
+
+    /**
+     * @desc Big O: O(1)
+     */
+    public static int addItems(int n)
+    {
+        return n + n;
+    }
 }
