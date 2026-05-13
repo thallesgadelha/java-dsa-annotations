@@ -21,9 +21,36 @@ public class BigO
      */
     public static void example002(int n)
     {
-            for (int i = 0; i <= n; ++i)
-            {
-                System.out.println(i);
-            }
+        for (int i = 0; i <= n; ++i)
+        {
+            System.out.println(i);
+        }
+    }
+
+    /**
+     * @desc Big O: Drop Constants
+     * 
+     * n + n = 2n
+     * O(2n)
+     */
+    public static void example003(int n)
+    {
+        for (int i = 0; i <= n; ++i)
+        {
+            System.out.println(i);
+        }
+
+        for (int j = 0; j <= n; ++j)
+        {
+            System.out.println(j);
+        }
+    }
+
+    /**
+     * @desc Big O: O(n2)
+     */
+    public static void example004()
+    {
+
     }
 }

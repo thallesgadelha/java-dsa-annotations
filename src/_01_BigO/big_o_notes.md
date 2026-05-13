@@ -27,10 +27,10 @@ No matter if the data set has 10 items, 1,000 items, or 1,000,000 items, the ope
 
 Accessing an array element by its index:
 
-```js
-const numbers = [10, 20, 30, 40, 50];
+```java
+int[] numbers = {10, 20, 30, 40, 50};
 
-console.log(numbers[2]);
+System.out.println(numbers[2]);
 ```
 
 In this example, the program directly accesses the element at index `2`.
@@ -67,28 +67,28 @@ Binary search is a common example of **O(log n)**.
 
 Binary search works on a sorted list. It checks the middle element and decides whether to continue searching on the left side or the right side.
 
-```js
-const numbers = [1, 3, 5, 7, 9, 11, 13];
+```java
+int[] numbers = {1, 3, 5, 7, 9, 11, 13};
 
-function binarySearch(array, target) {
-  let left = 0;
-  let right = array.length - 1;
+public static int binarySearch(int[] array, int target) {
+    int left = 0;
+    int right = array.length - 1;
 
-  while (left <= right) {
-    const middle = Math.floor((left + right) / 2);
+    while (left <= right) {
+        int middle = (left + right) / 2;
 
-    if (array[middle] === target) {
-      return middle;
+        if (array[middle] == target) {
+            return middle;
+        }
+
+        if (array[middle] < target) {
+            left = middle + 1;
+        } else {
+            right = middle - 1;
+        }
     }
 
-    if (array[middle] < target) {
-      left = middle + 1;
-    } else {
-      right = middle - 1;
-    }
-  }
-
-  return -1;
+    return -1;
 }
 ```
 
@@ -122,11 +122,11 @@ If the input size doubles, the number of operations also roughly doubles.
 
 Looping through an array:
 
-```js
-const names = ["Anna", "John", "Maria", "Peter"];
+```java
+String[] names = {"Anna", "John", "Maria", "Peter"};
 
-for (const name of names) {
-  console.log(name);
+for (String name : names) {
+    System.out.println(name);
 }
 ```
 
@@ -204,13 +204,13 @@ This often happens when there are nested loops.
 
 Comparing every element with every other element:
 
-```js
-const numbers = [1, 2, 3, 4];
+```java
+int[] numbers = {1, 2, 3, 4};
 
-for (let i = 0; i < numbers.length; i++) {
-  for (let j = 0; j < numbers.length; j++) {
-    console.log(numbers[i], numbers[j]);
-  }
+for (int i = 0; i < numbers.length; i++) {
+    for (int j = 0; j < numbers.length; j++) {
+        System.out.println(numbers[i] + " " + numbers[j]);
+    }
 }
 ```
 
@@ -272,8 +272,8 @@ What is the best performance this algorithm can have?
 
 Imagine searching for a number in an array:
 
-```js
-const numbers = [5, 10, 15, 20, 25];
+```java
+int[] numbers = {5, 10, 15, 20, 25};
 ```
 
 If you are searching for `5`, the algorithm finds it immediately at the first position.
@@ -332,8 +332,8 @@ What is the maximum amount of work this algorithm might need?
 
 Searching for a number in an unsorted array:
 
-```js
-const numbers = [5, 10, 15, 20, 25];
+```java
+int[] numbers = {5, 10, 15, 20, 25};
 ```
 
 If the number is at the last position, or if it does not exist in the array, the algorithm may need to check every element.
@@ -440,4 +440,3 @@ Big O notation helps us understand how scalable an algorithm is.
 It does not tell us the exact running time in seconds. Instead, it tells us how the algorithm behaves as the input size grows.
 
 A good algorithm is not always the one with the smallest Big O notation, but Big O is a very useful tool for comparing algorithms, especially when dealing with large data sets.
-

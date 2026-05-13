@@ -11,5 +11,5 @@ void main()
     }
     */
 
-    BigO.example002(5);
+    BigO.example003(5);
 }
