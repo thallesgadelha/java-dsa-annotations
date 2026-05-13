@@ -47,10 +47,19 @@ public class BigO
     }
 
     /**
-     * @desc Big O: O(n2)
+     * @desc Big O: O(n²)
+     * 
+     * n * n = n²
+     * O(n²)
      */
-    public static void example004()
+    public static void example004(int n)
     {
-
+        for (int i = 0; i < n; ++i)
+        {
+            for (int j = 0; j < n; ++j)
+            {
+                System.out.println(i + " " + j);
+            }
+        }
     }
 }
