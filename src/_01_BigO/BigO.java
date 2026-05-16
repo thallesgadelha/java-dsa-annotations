@@ -93,4 +93,40 @@ public class BigO
     {
         return n + n;
     }
+
+    /**
+     * @desc Big O: O(log n)
+     * 
+     * Binary Search Example
+     * int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8};
+     * log(2) 8 = 3
+     */
+    public static void example006()
+    {
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8};
+
+        int target = 7;
+
+        int left = 0;
+        int right = numbers.length - 1;
+
+        while (left <= right) {
+            int middle = (left + right) / 2;
+
+            System.out.println("Checking index: " + middle + ", value: " + numbers[middle]);
+
+            if (numbers[middle] == target) {
+                System.out.println("Found " + target + " at index " + middle);
+                return;
+            }
+
+            if (numbers[middle] < target) {
+                left = middle + 1;
+            } else {
+                right = middle - 1;
+            }
+        }
+
+        System.out.println("Value not found.");
+    }
 }
